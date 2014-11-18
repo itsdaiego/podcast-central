@@ -1,7 +1,51 @@
 $main-font: 'Nunito', Arial;
 $main-font-color: #383838;
-
+$main-color-theme: #f15a29;
 section#main_section{
 	font-family: $main-font;
 	color: $main-font-color;
+
+	header{
+		height:45px;
+		background-color: $main-color-theme;
+		nav{
+			padding: 8px 70px 0 70px;
+		}
+		ul{
+			list-style:none;
+			text-decoration:none;
+		}
+		.logo{
+			float:left;
+		}
+		.menu-right{
+
+			float:right;
+			li{
+				padding:0 20px;
+			}
+		}
+		li{
+			display:inline-block;
+		}
+		a{
+
+		}
+		p{
+			text-align:center;
+		}
+	}
+	article{
+		border: 3px solid #CCC;
+		p{
+			text-align:justify;
+		}
+	}
+	footer{
+		background-color:#333;
+		p{
+		   text-align:center;
+		   color:#FFF;		  
+		}
+	}
 }
