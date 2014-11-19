@@ -10,12 +10,17 @@ $main-color-theme: #242424;
 #wrapper{	
 	font-family: $main-font;
 	color: $main-font-color;
+	hr{
+		width:100%;
+		border-top: 1px solid #e8e8e8;
 
+	}	
+	/*HEADER CSS*/
 	header{
 		height:55px;
 		background-color: $main-color-theme;
 		nav{
-			padding: 0 15% 0 10%;
+			padding: 0 10% 0 5%;
 		}
 		ul{
 			list-style:none;
@@ -67,13 +72,19 @@ $main-color-theme: #242424;
 			text-align:center;
 		}
 	}
+	/*HEADER ENDS*/
+	/*CONTENT CSS*/
 	section#content-section{	
-			margin-top:30px;
+			margin-top:50px;
 			width:100%;			
 		article#signup{
-			width:50%;
+			width:70%;
 			margin: 0 auto;
-
+			span{
+				font-size: 40px;
+				text-align: justify;
+				font-family:'Open Sans' 'Roboto', $main-font, Arial;
+			}
 			img{
 				max-width: 100%;
 				height:auto;
@@ -83,9 +94,13 @@ $main-color-theme: #242424;
 			}
 		}
 	}
+	/*CONTENT ENDS*/
+	/*FOOTER CSS*/
+
 	section#footer-section{
-			margin: 0 auto;
-			width:1000px;		
+			margin: 10px auto;
+			width:1000px;	
+
 			footer{
 				p{
 				   text-align:justify;
@@ -93,4 +108,5 @@ $main-color-theme: #242424;
 				}
 			}
 		}
+	/*FOOTER ENDS*/
 }

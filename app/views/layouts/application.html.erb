@@ -8,13 +8,14 @@
 </head>
 <body>
 	<div id="wrapper"> 
-		<section class="header-section">
+		<section id="header-section">
 			<%= render 'layouts/header' %>
 		</section>
-		<section class="content-section">
+		<section id="content-section">
 			<%= yield %>
 		</section>
-		<section class="footer-section">
+		<hr></hr>
+		<section id="footer-section">
 			<%= render 'layouts/footer' %>
 		</section>
 	</div>
