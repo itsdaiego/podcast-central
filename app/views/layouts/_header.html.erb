@@ -4,13 +4,14 @@
 		<section id="header-section">
 			<ul class="logo">
 				<li class="name">
-					<span><a href="/"><%= image_tag "podcentral-icon.png" %></a></span>					
+					<h1><a href="/">#Podcast Central</a></h1>
+					<!-- <%= image_tag "podcentral-icon.png" %>-->		
 				</li>					
 			</ul>			
-			<ul class="menu-right">						
-				<li><a href="/podcast">Podcasts</a></li>
-				<li><a href="/group">Groups</a></li>
-				<li><a href="/blog">About</a></li>
+			<ul class="menu-right">					
+				<li><%= link_to "PODCASTS", podcasts_path %></li>
+				<li><%= link_to "COMMUNITY", community_path %></li>
+				<li><%= link_to "SIGN IN", signin_path %></li>
 
 			</ul>
 		</section>
