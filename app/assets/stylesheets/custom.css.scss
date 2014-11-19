@@ -1,5 +1,139 @@
+/* IMPORTS */
 @import url(http://fonts.googleapis.com/css?family=Nunito);
 @import url(http://fonts.googleapis.com/css?family=Open+Sans);
 @import url(http://fonts.googleapis.com/css?family=Roboto);
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
+
+/*background options: 1- #242424  2-#f15a29*/
+/*font header color: 1- #fccb05 2-#f5f5f5;*/
+
+$main-font: 'Nunito',Helvetica,  Arial;
+$main-font-link: 'Roboto',Helvetica, Arial;
+$main-font-color: #383838;
+$main-color-link:#fccb05;
+$main-color-theme: #242424;
+
+#wrapper{	
+	font-family: $main-font;
+	color: $main-font-color;
+	hr{
+		width:100%;
+		border-top: 1px solid #e8e8e8;
+
+	}	
+	/*HEADER CSS*/
+	header{
+		height:55px;
+		background-color: $main-color-theme;
+		nav{
+			padding: 0 10% 0 5%;
+		}
+		ul{
+			list-style:none;
+			text-decoration:none;
+		}
+		.logo{
+			float:left;
+			h1{
+				font-size: 30px;
+				font-family:'trackregular', 'Roboto', Arial;
+				margin-top: 10px;
+			}
+			a{
+				text-decoration:none;
+				color:#fccb05;
+			}
+		}
+		.menu-right{
+			float:right;
+			li{
+				padding:0 20px;
+				&:hover{
+					background-color: $main-color-link;
+					a{
+						color: $main-color-theme;
+					}
+
+				}
+			}
+			a{
+				font-family: $main-font-link;
+				font-size:15px;
+				color:$main-color-link;
+				&:hover{
+					text-decoration:none;
+				}
+			}
+		}
+		li{
+			display:inline-block;
+			line-height:55px;
+		}
+		p{
+			text-align:center;
+		}
+	}
+	/*HEADER ENDS*/
+	/*CONTENT CSS*/
+	section#content-section{	
+			margin: 50px 0 20px 0px;
+			width:100%;			
+			height:300px;
+		article#signup{
+			width:70%;
+			height: 100%;
+			margin: 0 auto;
+			#signup-left{
+				width:50%;
+				float:left;
+				span{
+					font-size: 40px;
+					text-align: justify;
+					font-family:'Roboto', $main-font, Arial;
+				}
+				li{
+					list-style:none;	
+					display:inline-block;
+					margin-left:15px;
+				}
+				a{
+					text-decoration:none;
+					font-family:'Roboto',Arial;
+					background-color: $main-color-theme;
+					color: $main-color-link;
+					padding: 9px;
+					font-size: 33px;
+					&:hover{
+						background-color: $main-color-link;
+						color:$main-color-theme;
+					}
+				}
+			}
+			#signup-right{
+				width:50%;
+				float:right;
+				img{
+					max-width: 100%;
+					height:auto;
+				}
+			}	
+		}
+	}
+	/*CONTENT ENDS*/
+	/*FOOTER CSS*/
+
+	section#footer-section{
+			margin: 10px auto;
+			width:1000px;	
+
+			footer{
+				p{
+				   text-align:justify;
+				   
+				}
+			}
+		}
+	/*FOOTER ENDS*/
+}
