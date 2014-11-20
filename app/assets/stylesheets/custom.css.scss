@@ -89,21 +89,23 @@ $main-color-theme: #242424;
 				width:50%;
 				float:left;
 				span{
-					font-size: 40px;
+					font-size: 27px;
+					font-weight:300;
 					text-align: justify;
-					font-family:'Roboto', $main-font, Arial;
+					font-family:'Open Sans','Roboto', $main-font, Arial;
 				}
 				li{
+					margin: 30px 0 0 0;
+
 					list-style:none;	
-					display:inline-block;
-					margin-left:15px;
+					display:inline-block;				
 				}
 				a{
 					text-decoration:none;
 					font-family:'Roboto',Arial;
 					background-color: $main-color-theme;
 					color: $main-color-link;
-					padding: 9px;
+					padding: 10px 20px 10px 20px;
 					font-size: 33px;
 					&:hover{
 						background-color: $main-color-link;
