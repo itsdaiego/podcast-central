@@ -4,7 +4,7 @@
 @import url(http://fonts.googleapis.com/css?family=Roboto);
 @import "bootstrap-sprockets";
 @import "bootstrap";
-
+/**********/
 
 /*background options: 1- #242424  2-#f15a29*/
 /*font header color: 1- #fccb05 2-#f5f5f5;*/
@@ -26,11 +26,7 @@ body{
 		position:relative;
 		font-family: $main-font;
 		color: $main-font-color;
-		hr{
-			width:100%;
-			border-top: 1px solid #e8e8e8;
-
-		}	
+	
 		/*HEADER CSS*/
 		header{
 			height:55px;
@@ -83,95 +79,107 @@ body{
 				text-align:center;
 			}
 		}
-		/*HEADER ENDS*/
+		/**********/
 		/*CONTENT CSS*/
 		section#content-section{	
 				margin: 50px auto;
 				width:70%;			
 				min-height:100%;
-			article#signup{
+				hr{
+					width:100%;
+					border-top: 1px solid #e8e8e8;
+					margin-top: 20px;
+				}
+			article#signup, article#community{
 				width:100%;
 				height: 100%;
-				#signup-left{
+
+				#left{
 					width:50%;
 					float:left;
-					span{
-						font-size: 27px;
-						font-weight:300;
-						text-align: justify;
-						font-family:'Open Sans','Roboto', $main-font, Arial;
 					}
-					li{
-						margin: 30px 0 0 0;
+				span{
+					margin-right:20px;
+					font-size: 27px;
+					font-weight:300;
+					text-align: justify;
+					font-family:'Open Sans','Roboto', $main-font, Arial;
+				}
+				li{
+					margin: 30px 0 0 0;
 
-						list-style:none;	
-						display:inline-block;				
-					}
-					a{
-						text-decoration:none;
-						font-family:'Roboto',Arial;
-						background-color: $main-color-theme;
-						color: $main-color-link;
-						padding: 10px 20px 10px 20px;
-						font-size: 33px;
-						&:hover{
-							background-color: $main-color-link;
-							color:$main-color-theme;
-						}
+					list-style:none;	
+					display:inline-block;				
+				}
+				a{
+					text-decoration:none;
+					font-family:'Roboto',Arial;
+					background-color: $main-color-theme;
+					color: $main-color-link;
+					padding: 10px 20px 10px 20px;
+					font-size: 33px;
+					&:hover{
+						background-color: $main-color-link;
+						color:$main-color-theme;
 					}
 				}
-				#signup-right{
-					width:50%;
-					float:right;
-					img{
-						max-width: 100%;
-						height:auto;
-					}
-				}	
+				
+			#right{
+				width:50%;
+				float:right;
+				}
+				img{
+					max-width: 100%;
+					height:auto;
+				}
+					
 			}
 		}
-		/*CONTENT ENDS*/
+		/**********/
 		/*FOOTER CSS*/
 
 		section#footer-section{
 				background-color: $main-color-theme;
-				margin: 10px auto;
 				width:100%;	
 
 				footer{
-					width:70%;
+					width:85%;
 					margin:0 auto;
 					height:100px;
-					small{
-						float:left;
-						font-size: 16px;
-						font-family: 'Roboto';
-						color:#f5f5f5;
-						a{
-							font-size: 17px;
+					#footer-content{
+						width:100%;
+						height:100%;
+						padding-top:10px;
+						small{
+							float:left;
+							font-size: 16px;
 							font-family: 'Roboto';
-							display:inline-block;
-							color: $main-color-link;
+							color:#f5f5f5;
+							a{
+								font-size: 17px;
+								font-family: 'Roboto';
+								display:inline-block;
+								color: $main-color-link;
+							}
+						}
+						p{
+						   text-align:justify;
+						   
+						} 
+						li{
+							list-style:none;
+							a{
+								font-size: 14px;
+								font-family: 'Roboto';
+								display:inline-block;
+								float:right;
+								color: $main-color-link;
+								padding: 0 10px 0;
+							}
 						}
 					}
-					p{
-					   text-align:justify;
-					   
-					} 
-					li{
-						list-style:none;
-						a{
-							font-size: 17px;
-							font-family: 'Roboto';
-							display:inline-block;
-							float:right;
-							color: $main-color-link;
-							padding: 0 10px 0;
-						}
-					}
-
 				}
 			}
-		/*FOOTER ENDS*/
+		/**********/
 	}
 }
