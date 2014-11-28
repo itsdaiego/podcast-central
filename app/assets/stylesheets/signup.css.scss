@@ -1,16 +1,36 @@
-article.signup{
+@import 'variables';
+
+article#register{
+	width:100%;
+	margin:0 auto;
 	h1{
 		text-align:center;
 	}
-	input{
-	height: 40px;
-	border-radius: 3px;
-	border: 2px solid #000;
-	width: 70%;
-	display: block;
-	margin: 0 auto;
-	}
 	label{
-		margin: 10px auto;
+		margin-left:15%;
+		font-weight:300;
+		font-size:15px;
 	}
+	input[type=text],
+	input[type=password]{
+		width:70%;
+		margin: 0 auto 10px auto;
+		border-radius:0 !important;
+
+	}
+	input[type=submit]{
+		margin-left:15%;
+		width:20%;
+		height:50px;
+		font-family: 'Roboto', Arial;
+		color:$main-color-link;
+		background-color:$main-color-theme;
+	}
+		/** CHANGING BOOSTRAP BLUE GLOW **/
+		textarea:focus, input[type="text"]:focus, input[type="password"]:focus, input[type="datetime"]:focus, input[type="datetime-local"]:focus, input[type="date"]:focus, input[type="month"]:focus, input[type="time"]:focus, input[type="week"]:focus, input[type="number"]:focus, input[type="email"]:focus, input[type="url"]:focus, input[type="search"]:focus, input[type="tel"]:focus, input[type="color"]:focus, .uneditable-input:focus {   
+			border-color: $main-color-link;
+			box-shadow: 0 1px 1px $main-color-link inset, 0 0 8px $main-color-link;;
+			outline: 0 none;
+		}
+	/** END FOCUS **/
 }

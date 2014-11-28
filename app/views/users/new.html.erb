@@ -1,24 +1,24 @@
-<article class="signup">
-<h1>Sign up<h1>
+<article id="register">
+<h1>Sign up</h1>
 
 	<div class="row">
 		<div class="span6 offset3">
 			<%=  form_for(@user) do |f| %>
 
-			<%= f.label :name %>
-			<%= f.text_field :name %>
+			<%= f.label :name,"Name *" %>
+			<%= f.text_field :name, class: "form-control" %>
 
-			<%= f.label :email %>
-			<%= f.text_field :email %>
+			<%= f.label :email,"Email *" %>
+			<%= f.text_field :email, class: "form-control" %>
 
-			<%= f.label :password %>
-			<%= f.password_field :password %>
+			<%= f.label :password,"Password *" %>
+			<%= f.password_field :password, class: "form-control" %>
 
 			<%= f.label :password_confirmation,
-			"Confirmation" %>
-			<%= f.password_field :password_confirmation %>
+			"Password Confirmation *" %>
+			<%= f.password_field :password_confirmation, class: "form-control" %>
 
-			<%= f.submit "Create Account", class: "signup-butto" %>		
+			<%= f.submit "SIGN UP", class: "btn btn-default" %>		
 			<% end %>
 		</div>
 	</div>
