@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title><%= full_title(yield(:title)) %></title>
-	<meta name="viewport" content="width=device-width">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title><%= full_title(yield(:title)) %></title>
 	<%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
 	<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
 	<%= csrf_meta_tags %>
@@ -13,6 +13,9 @@
 			<%= render 'layouts/header' %>
 		</section>
 		<section id="content-section">
+			<% flash.each do |key, value| %>
+			<div class="alert alert-<%= key %>"><%= value %></div>
+			<% end %>
 			<%= yield %>
 		</section>
 
