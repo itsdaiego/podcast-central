@@ -18,7 +18,7 @@
 			<% end %>
 			<%= yield %>
 		</section>
-
+		<%= debug(params) if Rails.env.development? %>
 		<section id="footer-section">
 			<%= render 'layouts/footer' %>
 		</section>
