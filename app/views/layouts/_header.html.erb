@@ -11,8 +11,11 @@
 			<ul class="menu-right">					
 				<li><%= link_to "PODCASTS", podcasts_path %></li>
 				<li><%= link_to "COMMUNITY", community_path %></li>
+				<% if signed_in? %>
+				<li><%= link_to "LOGOUT", signout_path, method: "delete" %></li>
+				<% else %>
 				<li><%= link_to "SIGN IN", signin_path %></li>
-
+				<% end %>
 			</ul>
 		</section>
 	</nav>
