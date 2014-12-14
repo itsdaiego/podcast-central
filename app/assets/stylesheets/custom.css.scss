@@ -50,7 +50,21 @@ body{
 						}
 
 					}
+					&:hover ul{
+					   display: block;
+					}
 				}
+				ul.submenu{
+					position:absolute;
+					background-color:$main-color-theme;
+					display:none;
+				}
+				li.submenu{
+					padding: 0;
+					display: block;
+
+				}
+
 				a{
 					font-family: $main-font-link;
 					font-size:15px;
