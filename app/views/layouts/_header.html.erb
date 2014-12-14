@@ -12,12 +12,12 @@
 				<li><%= link_to "PODCASTS", podcasts_path %></li>
 				<li><%= link_to "COMMUNITY", community_path %></li>
 				<% if signed_in? %>
-				<li><a href="#">ACCOUNT <b class="caret"> </b></a>
+				<li id="dropdown-menu"><a href="#">ACCOUNT <b class="caret"> </b></a>
 					<ul class="submenu">
-					<li class="submenu"><%= link_to "Profile", current_user %></li>
-						<li class="submenu"><%= link_to "Settings", edit_user_path(current_user) %></li>
+					<li class="submenu"><%= link_to "PROFILE", current_user %></li>
+						<li class="submenu"><%= link_to "SETTINGS", edit_user_path(current_user) %></li>
 						<li class="submenu">
-							<%= link_to "Sign out", signout_path, method: "delete" %>
+							<%= link_to "SIGN OUT", signout_path, method: "delete" %>
 						</li>
 					</ul>
 				</li>		

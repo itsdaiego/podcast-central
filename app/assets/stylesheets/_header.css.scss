@@ -16,29 +16,37 @@ header{
 				font-family:'trackregular', 'Roboto', Arial;
 				margin-top: 10px;
 			}
-			a{					text-decoration:none;
+			a{					
+				text-decoration:none;
 				color:#fccb05;
 			}
-		}			.menu-right{
+		}
+		.menu-right{
 			float:right;
-			li{					padding:0 20px;
+			li{
+			
 				&:hover{
 					background-color: $main-color-link;
-					a{
+
+					>a{
 						color: $main-color-theme;						}
 				}
-				&:hover ul{
-				   display: block;
-				}
 			}
+			>li{
+				padding:0 20px;
+			}
+			
 			ul.submenu{
+				padding:0;
+				margin-left: -20px;
 				position:absolute;
 				background-color:$main-color-theme;
 				display:none;
 			}
 			li.submenu{
-			width: 130px;
+				width:122px;
 				display: block;
+				padding-left:30px;
 			}
 			a{
 				font-family: $main-font-link;
