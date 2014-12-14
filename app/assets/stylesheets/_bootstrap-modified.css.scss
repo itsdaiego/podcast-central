@@ -1,5 +1,6 @@
 @import 'variables';
 
+/** NEW FORM **/
 input[type=text],
 	input[type=password]{
 		width:100%;
@@ -21,4 +22,4 @@ input[type=text],
 			box-shadow: 0 1px 1px $main-color-link inset, 0 0 8px $main-color-link;;
 			outline: 0 none;
 		}
-	/** END FOCUS **/
+	/** END **/

@@ -12,7 +12,13 @@
 				<li><%= link_to "PODCASTS", podcasts_path %></li>
 				<li><%= link_to "COMMUNITY", community_path %></li>
 				<% if signed_in? %>
-				<li><%= link_to "LOGOUT", signout_path, method: "delete" %></li>
+				<li><a href="#">ACCOUNT</a>
+					<ul class="submenu">
+						<li class="submenu"><a href="#">Sub Menu 1</a></li>
+						<li class="submenu"><a href="#">Sub Menu 2</a></li>
+						<li class="submenu"><a href="#">Sub Menu 3</a></li>
+					</ul>
+				</li>		
 				<% else %>
 				<li><%= link_to "SIGN IN", signin_path %></li>
 				<% end %>
