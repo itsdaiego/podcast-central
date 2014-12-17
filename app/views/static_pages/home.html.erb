@@ -1,6 +1,15 @@
 <% if signed_in? %>
-<%= gravatar_for current_user, size: 100 %>
-<h1> <%= current_user.name %> </h1>
+<% provide(:title, current_user.name) %>
+<div class="row">
+	<aside class="span4">	
+		<section>
+			<h1>
+				<%= gravatar_for current_user, size: 100 %>
+				<%= current_user.name %> 
+			</h1>
+		</section>
+	</aside>
+</div>
 <% else %>
 <article id="signup">
 	<div id="left"> 
