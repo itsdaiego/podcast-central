@@ -5,14 +5,13 @@
 			<ul class="logo">
 				<li class="name">
 					<h1><a href="/">PODCAST CENTRAL</a></h1>
-					<!-- <%= image_tag "podcentral-icon.png" %>-->		
 				</li>					
 			</ul>			
 			<ul class="menu-right">					
 				<li><%= link_to "PODCASTS", podcasts_path %></li>
-				<li><%= link_to "COMMUNITY", community_path %></li>
+				<li><%= link_to "COMMUNITY", users_path %></li>
 				<% if signed_in? %>
-				<li><a id="dropdown-menu" href="#">ACCOUNT <b class="caret"> </b></a>
+				<li><a id="dropdown-menu"  href="#">ACCOUNT <b class="caret"> </b></a>
 					<ul class="submenu">
 					<li class="submenu"><%= link_to "PROFILE", current_user %></li>
 						<li class="submenu"><%= link_to "SETTINGS", edit_user_path(current_user) %></li>
@@ -20,7 +19,7 @@
 							<%= link_to "SIGN OUT", signout_path, method: "delete" %>
 						</li>
 					</ul>
-				</li>		
+				</li>
 				<% else %>
 				<li><%= link_to "SIGN IN", signin_path %></li>
 				<% end %>

@@ -1,5 +1,9 @@
 class UsersController < ApplicationController
     include SessionsHelper
+
+    def index
+    	@users = User.paginate(page: params[:page])
+    end
 	def new
 		@user = User.new
 	end
