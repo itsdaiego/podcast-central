@@ -1,5 +1,4 @@
 require 'spec_helper'
-
 describe "User pages" do
 	
 	subject{page}
@@ -9,8 +8,7 @@ describe "User pages" do
 		let(:user) { FactoryGirl.create(:user) }
 		
 		before(:each) do 
-			
-			afoifdjiaijo
+			sign_in user
 			visit users_path 
 		end
 		it{ should have_title('Podcast Central | Community') }
