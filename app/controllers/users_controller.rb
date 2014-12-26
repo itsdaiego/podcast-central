@@ -1,4 +1,6 @@
 class UsersController < ApplicationController
+	before_action :signed_in_user,
+		only: [:index, :edit, :update, :destroy]
     include SessionsHelper
 
     def index
@@ -11,7 +13,7 @@ class UsersController < ApplicationController
 		@user = User.new(user_params)
 		if @user.save
 			sign_in @user
-			flash[:success] = "User Created!"
+			flash[:info] = "User Created!"
 			redirect_to @user
 		else
 			render 'new'
