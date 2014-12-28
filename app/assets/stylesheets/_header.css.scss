@@ -7,7 +7,6 @@ header{
 		}
 		ul{
 			list-style:none;
-			text-decoration:none;
 		}
 		.logo{
 			float:left;
@@ -52,9 +51,7 @@ header{
 				font-family: $main-font-link;
 				font-size:15px;
 				color:$main-color-link;
-				&:hover{
-					text-decoration:none;
-				}
+				text-decoration:none;
 			}
 		}
 		li{

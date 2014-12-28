@@ -1,10 +1,9 @@
 <% provide(:title, 'Community') %>
+<section class="community">
 <h1>Members</h1>
-
-<%= will_paginate %>
-
 <ul class="users">
   <%= render @users %>
 </ul>
 
-<%= will_paginate %>
+<%= will_paginate @users, previous_label: ('previous'), next_label: ('next') %>
+</section>

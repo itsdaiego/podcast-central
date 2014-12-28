@@ -1,0 +1,21 @@
+@import 'variables';
+.pagination{
+	ul{
+		list-style:none;
+		text-decoration:none;
+		li.previous_page, li.next_page{
+		}
+		li{
+
+			display:inline-block;
+			a{
+				text-decoration:none;
+				border: 1px solid $main-color-link;
+				background-color: $main-color-theme;
+				font-size: 15px;
+				padding: 3px;
+				color: $main-color-link;
+			}
+		}
+	}
+}
