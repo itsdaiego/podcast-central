@@ -3,8 +3,7 @@
 	ul{
 		list-style:none;
 		text-decoration:none;
-		li.previous_page, li.next_page{
-		}
+		padding:0;
 		li{
 
 			display:inline-block;
@@ -13,8 +12,9 @@
 				border: 1px solid $main-color-link;
 				background-color: $main-color-theme;
 				font-size: 15px;
-				padding: 3px;
+				padding: 10px;
 				color: $main-color-link;
+				font-family: $main-font-link;
 			}
 		}
 	}
