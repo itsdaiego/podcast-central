@@ -10,5 +10,11 @@ article#register, article#settings,article#signin{
 		font-weight:300;
 		font-size:15px;
 	}
+	ul{
+		padding:0;
+	}
+	p,li{
+		text-align:justify;
+	}
 	@import 'bootstrap-modified';
 }
