@@ -1,0 +1,23 @@
+@import 'variables';
+@media screen and (max-width: 870px){
+
+	ul.menu-right{
+		display:none;
+	} 
+	ul.menu-icon{
+		content: "";
+		position: absolute;
+		right: 40px;
+		top: 21px;
+		width: 1em;
+		background: #fccb05;
+		box-shadow: 0 -1px 0 3px #fccb05, 0 19px 0 3px #fccb05, 0 9px 0 3px #fccb05;
+		display: block;
+	}
+	
+}
+@media screen and (min-width: 871px){
+	ul.menu-icon{
+		display: none;
+	}
+}

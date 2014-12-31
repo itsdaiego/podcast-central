@@ -13,7 +13,8 @@
 				<% if signed_in? %>
 				<li><a id="dropdown-menu"  href="#">ACCOUNT <b class="caret"> </b></a>
 					<ul class="submenu">
-					<li class="submenu"><%= link_to "PROFILE", current_user %></li>
+						<li class="submenu"><%= link_to "PROFILE", current_user %>
+						</li>
 						<li class="submenu"><%= link_to "SETTINGS", edit_user_path(current_user) %></li>
 						<li class="submenu">
 							<%= link_to "SIGN OUT", signout_path, method: "delete" %>
@@ -23,6 +24,8 @@
 				<% else %>
 				<li><%= link_to "SIGN IN", signin_path %></li>
 				<% end %>
+			</ul>
+			<ul class="menu-icon">
 			</ul>
 		</section>
 	</nav>

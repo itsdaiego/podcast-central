@@ -11,18 +11,22 @@ header{
 		.logo{
 			float:left;
 			h1{
-				font-size: 30px;
-				font-family:'trackregular', 'Roboto', Arial;
-				margin-top: 10px;
+				font-size: 25px;
+				font-family: 'trackregular', 'Roboto', Arial;
+				margin-top: 14px;
 			}
 			a{					
 				text-decoration:none;
 				color:#fccb05;
 			}
 		}
+		.menu-icon{
+	
+		}
 		.menu-right{
 			float:right;
-			li{
+			padding: 0;
+			li{				
 			
 				&:hover{
 					background-color: $main-color-link;
