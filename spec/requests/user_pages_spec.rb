@@ -11,7 +11,7 @@ describe "User pages" do
 			sign_in user
 			visit users_path 
 		end
-		it{ should have_title('Community') }
+		it{ should have_title(full_title('Community')) }
 		it{ should have_content('Members') }
 	end	
 
@@ -29,6 +29,20 @@ describe "User pages" do
 			before { click_button "Save changes" }
 			it { should have_content('error') }
 		end
+
+		describe "valid information" do
+			let(:new_name) { "Test name" }
+			let(:new_email) { "test@email.com" }
+			before do
+				fill_in "Name", with: new_name
+				fill_in "Email", with: new_email
+				fill_in "Password", with: user.password
+				fill_in "Password Confirmation", with: user.password
+
+				click_button "Save changes"
+			end
+			it { should_not have_content('error')}
+			it { should have_title(new_name)}
+		end
 	end
-	
 end
