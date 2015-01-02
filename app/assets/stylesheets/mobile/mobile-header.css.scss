@@ -1,0 +1,47 @@
+@import 'variables';
+@media screen and (max-width: 870px){
+	
+	ul{
+		margin: 0;
+		width: 100%;
+		&.submenu{
+			width: 100%;
+			li.submenu{
+				width: 100% !important;
+				a{
+				font-size: 20px !important;
+				}
+			}
+		}
+		&.menu-right{
+			display: none;
+			width: 100%;
+			position: absolute;
+			top: 55px;
+			left: 0;
+			background-color: $main-color-theme;
+			li{
+				width:100%;
+				padding:0;
+				border-bottom: 1px solid $main-color-link;
+				a{
+					font-size: 20px !important;
+				}
+			}
+		} 
+		&.menu-icon img{
+			display: block;
+			position: absolute;
+			width: 35px;
+			height: 39px;
+			top: 7px;
+			right: 29px;
+		}
+
+	}	
+}
+@media screen and (min-width: 871px){
+	ul.menu-icon{
+		display: none;
+	}
+}
