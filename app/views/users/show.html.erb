@@ -2,10 +2,17 @@
 <div class="row">
 	<aside class="span4">	
 		<section>
-			<h1>
-				<%= gravatar_for @user, size: 100 %>
-				<%= @user.name %> 
-			</h1>
+			<article id="user">
+				<%= gravatar_for @user, size: 125 %>
+
+				<p><%= @user.name %> </p>
+			</article>
+			<article id="friends">
+				<p> Friends: </p>
+			</article>
+			<article id="podcasts">
+				<p> Podcasts </p>
+			</article>
 		</section>
 	</aside>
 </div>

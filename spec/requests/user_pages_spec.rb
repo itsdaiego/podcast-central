@@ -49,11 +49,9 @@ describe "User pages" do
 		let(:user) {FactoryGirl.create(:user)}
 		before(:each) do
 			sign_in user
-			visit edit_user_path(user)
+			visit user_path(user)
 		end
-		it { should have_content("Name") }
-		it { should have_content("Podcats") }
-		it { should have_content("Following") }
-		it { should have_content("Followers") }
+		it { should have_content("Podcasts") }
+		it { should have_content("Friends") }
 	end
 end
