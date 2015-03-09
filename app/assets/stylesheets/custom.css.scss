@@ -9,13 +9,13 @@ body{
 	width:100%;
 	height:100%;	
 	position:relative;
+	background-color: $main-background-color !important;
 	#wrapper{	
 		width:100%;
 		height:100%;	
 		position:relative;
 		font-family: $main-font;
 		color: $main-font-color;
-		
 		/*HEADER CSS*/
 
 		@import 'header';
@@ -24,7 +24,7 @@ body{
 		/*CONTENT CSS*/
 		section#content-section{	
 			margin: 50px auto;
-			width:70%;			
+			width:90%;			
 			min-height:100%;
 			hr{
 				width:100%;

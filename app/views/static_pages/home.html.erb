@@ -3,10 +3,17 @@
 <div class="row">
 	<aside class="span4">	
 		<section>
-			<h1>
+			<article id="user">
 				<%= gravatar_for current_user, size: 125 %>
-				<%= current_user.name %> 
-			</h1>
+
+				<p><%= current_user.name %> </p>
+			</article>
+			<article id="friends">
+				<p> Friends: </p>
+			</article>
+			<article id="podcasts">
+				<p> Podcasts </p>
+			</article>
 		</section>
 	</aside>
 </div>
