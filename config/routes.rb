@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 	resources :users
-	resources :podcasts
+	resources :podcasts, 	  only: [:index, :new, :create, :destroy]
 	resources :sessions,      only: [:new, :create, :destroy]
 	root to: 'static_pages#home'
 	match '/about',  to: 'static_pages#about', via: 'get'
