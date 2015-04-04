@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  devise_for :admin_users, ActiveAdmin::Devise.config
+  ActiveAdmin.routes(self)
 	resources :users
 	resources :podcasts, 	  only: [:index, :new, :create, :destroy]
 	resources :sessions,      only: [:new, :create, :destroy]
@@ -10,4 +12,3 @@ Rails.application.routes.draw do
 	match '/signin',  to: 'sessions#new',         via: 'get'
 	match '/signout', to: 'sessions#destroy',     via: 'delete'
 end
-
