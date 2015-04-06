@@ -2,6 +2,8 @@
 <section class="podcasts">
 <h1>Podcasts</h1>
 <ul class="podcasts">
-  
+  <%= render @podcasts %>
 </ul>
+
+<%= will_paginate @users, previous_label: ('PREVIOUS'), next_label: ('NEXT') %>
 </section>
