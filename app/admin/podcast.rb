@@ -1,5 +1,5 @@
 ActiveAdmin.register Podcast do
-  permit_params :name, :category, :description, :url
+  permit_params :name, :category, :description, :url, :image
 
   index do
     selectable_column
@@ -8,14 +8,16 @@ ActiveAdmin.register Podcast do
     column :category
     column :description
     column :url
+    column :image
     actions
   end
   form do |f|
-    f.inputs "Podcast Details" do
+    f.inputs "Podcast Details", :multipart => true do
       f.input :name
       f.input :category
       f.input :description
       f.input :url
+      f.input :image, :as => :file
     end
     f.actions
   end

@@ -11,6 +11,6 @@ class PodcastsController < ApplicationController
   end
   private
   def podcast_params
-    params.require(:podcast).permit(:name,:category,:description,:url)
+    params.require(:podcast).permit(:name,:category,:description,:url, :image, :remote_image_url)
   end
 end

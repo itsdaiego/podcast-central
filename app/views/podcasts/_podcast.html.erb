@@ -1,7 +1,7 @@
 <li>
-  <%= image_tag("placeholder.png", class: "intro-img") %>
+  <%= image_tag podcast.image_url(:large) %>
   <h2><%=  podcast.name %></h2>
   <p><%=  podcast.description %></p>
   <p><%= link_to podcast.name + "'s website", "http://#{podcast.url}" %></p>
-
+  <hr/>
 </li>
