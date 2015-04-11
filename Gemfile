@@ -12,6 +12,7 @@ gem 'bootstrap-will_paginate', '0.0.9'
 #gem "minitest", "~> 4.0"
 gem 'devise'
 gem 'activeadmin', github: 'activeadmin/activeadmin', branch: :master
+gem 'carrierwave'
 group :development, :test do
   gem 'sqlite3', '1.3.8'
   gem 'rspec-rails'

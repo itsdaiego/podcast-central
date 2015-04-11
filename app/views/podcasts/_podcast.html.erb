@@ -1,4 +1,7 @@
 <li>
-  <%=  podcast.name %>
-  <%= link_to podcast.url, podcast %>
+  <%= image_tag("placeholder.png", class: "intro-img") %>
+  <h2><%=  podcast.name %></h2>
+  <p><%=  podcast.description %></p>
+  <p><%= link_to podcast.name + "'s website", "http://#{podcast.url}" %></p>
+
 </li>
