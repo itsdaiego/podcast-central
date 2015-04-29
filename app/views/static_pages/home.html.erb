@@ -1,7 +1,7 @@
 <% if signed_in? %>
 <% provide(:title, current_user.name) %>
 <div class="row">
-	<aside class="span4">	
+	<aside class="span4">
 		<section>
 			<article id="user">
 				<%= gravatar_for current_user, size: 125 %>
@@ -19,21 +19,21 @@
 </div>
 <% else %>
 <article id="signup">
-	<div id="left"> 
+	<div id="left">
 		<span> A place to meet new podcasts and podcast listeners in just one place!  <li><%= link_to "GET INVOLVED", signup_path %></li> </span>
 	</div>
 	<div id="right">
 		<%= image_tag("placeholder.png", class: "intro-img") %>
 	</div>
 </article>
-<hr></hr>
+<hr/>
 <article id="community">
 	<div id="left">
 		<span> You will find a variety of communities to find new people and new podcasts  </span>
 	</div>
 	<div id="right">
 		<%= image_tag("placeholder.png", class: "intro-img") %>
-	</div>	
+	</div>
 </article>
-<hr></hr>
+<hr/>
 <% end -%>
