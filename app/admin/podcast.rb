@@ -1,5 +1,5 @@
 ActiveAdmin.register Podcast do
-  permit_params :name, :category, :description, :url, :image
+  permit_params :name, :category, :description, :url, :image, :remote_image_url
 
   index do
     selectable_column
@@ -18,6 +18,7 @@ ActiveAdmin.register Podcast do
       f.input :description
       f.input :url
       f.input :image, :as => :file
+      f.input :remote_image_url
     end
     f.actions
   end
