@@ -1,9 +1,14 @@
 Rails.application.routes.draw do
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
-	resources :users
+  resources :users do
+    member do
+        get :following, :followers
+    end
+  end
 	resources :podcasts, 	  only: [:index, :new, :create, :destroy]
 	resources :sessions,      only: [:new, :create, :destroy]
+  resources :relationships,       only: [:create, :destroy]
 	root to: 'static_pages#home'
 	match '/about',  to: 'static_pages#about', via: 'get'
 	match '/contact',  to: 'static_pages#contact', via: 'get'

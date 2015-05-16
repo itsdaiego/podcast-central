@@ -1,6 +1,7 @@
 source 'https://rubygems.org'
-ruby '1.9.3'
+ruby '2.2.1'
 #ruby-gemset=railstutorial_rails_4_0
+
 gem 'rails', '4.0.8'
 gem 'bootstrap-sass'
 gem 'sprockets', '2.11.0'
@@ -11,21 +12,22 @@ gem 'bootstrap-will_paginate', '0.0.9'
 #gem "minitest", "~> 4.0"
 gem 'devise'
 gem 'activeadmin', github: 'activeadmin/activeadmin', branch: :master
-gem 'rmagick'
+gem 'rmagick', '2.13.2', :git=>'http://github.com/rmagick/rmagick.git'
 gem 'carrierwave'
 group :development, :test do
-  gem 'sqlite3', '1.3.8'
+  #gem 'sqlite3', '1.3.8'
+  gem 'sqlite3'
   gem 'rspec-rails'
   # The following optional lines are part of the advanced setup.
-  gem 'guard-rspec', '2.5.0'
+  gem 'guard-rspec'
   gem 'spork-rails', '4.0.0'
-  gem 'guard-spork', '1.5.0'
+  #gem 'guard-spork', '1.5.0'
   gem 'childprocess', '0.3.6'
   end
 
 group :test do
   gem 'selenium-webdriver', '2.35.1'
-  gem 'capybara', '2.1.0'
+  gem 'capybara', '2.2.0'
   gem 'factory_girl_rails', '4.2.0'
   gem 'cucumber-rails', '1.3.0', :require => false
   gem 'database_cleaner', github: 'bmabey/database_cleaner'
