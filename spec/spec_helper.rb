@@ -24,6 +24,8 @@ Spork.prefork do
     # config.mock_with :flexmock
     # config.mock_with :rr
 
+    # named routes => specs files
+    config.include Rails.application.routes.url_helpers
     # Remove this line if you're not using ActiveRecord or ActiveRecord fixtures
     config.fixture_path = "#{::Rails.root}/spec/fixtures"
 

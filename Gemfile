@@ -17,7 +17,7 @@ gem 'carrierwave'
 group :development, :test do
   #gem 'sqlite3', '1.3.8'
   gem 'sqlite3'
-  gem 'rspec-rails'
+  gem 'rspec-rails', '~> 3.0'
   # The following optional lines are part of the advanced setup.
   gem 'guard-rspec'
   gem 'spork-rails', '4.0.0'

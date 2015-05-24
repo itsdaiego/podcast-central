@@ -53,6 +53,6 @@ describe "User pages" do
 			visit user_path(user)
 		end
 		it { should have_content("Podcasts") }
-		it { should have_content("Friends") }
+		it { should have_content(user.name) }
 	end
 end

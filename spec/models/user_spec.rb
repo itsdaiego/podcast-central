@@ -1,5 +1,5 @@
 require 'spec_helper'
-
+ 
 describe User do
 
 	before do
@@ -51,4 +51,4 @@ describe User do
 		before { @user.save }
 		it(:remember_token) { should_not be_blank }
 	end
-end	
+end

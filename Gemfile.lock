@@ -338,7 +338,7 @@ DEPENDENCIES
   rails (= 4.0.8)
   rails_12factor (= 0.0.2)
   rmagick (= 2.13.2)!
-  rspec-rails
+  rspec-rails (~> 3.0)
   sass-rails (= 4.0.1)
   sdoc (= 0.3.20)
   selenium-webdriver (= 2.35.1)

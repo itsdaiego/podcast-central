@@ -15,5 +15,7 @@ Rails.application.routes.draw do
 	match '/community',  to: 'users#community',   via: 'get'
 	match '/signup',  to: 'users#new',            via: 'get'
 	match '/signin',  to: 'sessions#new',         via: 'get'
-	match '/signout', to: 'sessions#destroy',     via: 'delete' 
+	match '/signout', to: 'sessions#destroy',     via: 'delete'
+  #get '/signin',  to: 'device/sessions#new'
+  #delete '/signout', to: 'device/sessions#destroy'
 end
