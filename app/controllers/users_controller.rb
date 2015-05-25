@@ -3,9 +3,7 @@ class UsersController < ApplicationController
 	only: [:index, :edit, :update, :destroy]
 
 	before_action :correct_user,   only: [:edit, :update]
-
-	include SessionsHelper
-
+ 
 	def index
 		@users = User.paginate(page: params[:page]).per_page(5)
 	end

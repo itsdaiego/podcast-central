@@ -9,24 +9,25 @@ class User < ActiveRecord::Base
                     uniqueness: { case_sensitive: false }
   has_secure_password
   validates :password, length: { minimum: 6 }
-  
-  has_many :reverse_relationships, foreign_key: "followed_id",
-                                 class_name:  "Relationship",
-                                 dependent:   :destroy
-                                 
-  has_many :followers, through: :reverse_relationships, source: :follower
-  has_many :following, through: :active_relationships,  source: :followed
-  
-  has_many :passive_relationships, class_name:  "Relationship",
-                                 foreign_key: "followed_id",
-                                 dependent:   :destroy
+  has_many :relationships, foreign_key: "follower_id", dependent: :destroy
   has_many :active_relationships, class_name:  "Relationship",
                                 foreign_key: "follower_id",
                                 dependent:   :destroy
-                                
-  
+  has_many :reverse_relationships, foreign_key: "followed_id",
+                                 class_name:  "Relationship",
+                                 dependent:   :destroy
 
-  
+  has_many :followers, through: :reverse_relationships, source: :follower
+  has_many :following, through: :active_relationships,  source: :followed
+
+  has_many :passive_relationships, class_name:  "Relationship",
+                                 foreign_key: "followed_id",
+                                 dependent:   :destroy
+
+
+
+
+
   def User.new_remember_token
     SecureRandom.urlsafe_base64
   end
@@ -34,7 +35,7 @@ class User < ActiveRecord::Base
   def User.digest(token)
     Digest::SHA1.hexdigest(token.to_s)
   end
-  
+
   def following?(other_user)
     relationships.find_by(followed_id: other_user.id)
   end

@@ -10,6 +10,7 @@
 			<% @user ||= current_user %>
 			<article id="friends">
 				<%= render 'shared/stats' %>
+				<%= render 'follow_form' if signed_in? %>
 			</article>
 			<article id="podcasts">
 				<p> Podcasts </p>
