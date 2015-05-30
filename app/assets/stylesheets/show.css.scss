@@ -7,11 +7,17 @@ aside.span4{
 			border-radius:100px;
 			display:block;
 			margin: 20px auto 10px auto;
-		}			
+		}
 		p{
 			font-weight: 300;
 			text-align: center;
 			font-size: 25px;
+		}
+		@import "stats";
+		input[type="submit"]{
+			width: 230px !important;
+			margin-top: 20px;
+			border-radius: 100px;
 		}
 	}
 }

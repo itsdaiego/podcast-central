@@ -3,12 +3,12 @@
 	<aside class="span4">
 		<section>
 			<article id="user">
-				<%= gravatar_for @user, size: 125 %>
+				<%= gravatar_pic @user, size: 150 %>
 
 				<p><%= @user.name %> </p>
 			</article>
 			<% @user ||= current_user %>
-			<article id="friends">
+			<article id="follow">
 				<%= render 'shared/stats' %>
 				<%= render 'follow_form' if signed_in? %>
 			</article>

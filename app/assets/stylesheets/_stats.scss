@@ -1,0 +1,20 @@
+#follow{
+  text-align: center;
+  margin: 30px 0;
+  .following, .followers{
+    display: inline-block;
+    margin: 0 20px;
+  }
+  .stats{
+    a{
+      color: #000;
+      font-size: 16px;
+      strong{
+        font-weight: bold;
+        display: block;
+        margin-top: 8px;
+        font-size: 23px;
+      }
+    }
+  }
+}
