@@ -6,7 +6,12 @@ Rails.application.routes.draw do
         get :following, :followers
     end
   end
-	resources :podcasts, 	  		only: [:index, :new, :create, :destroy]
+  resources :podcasts do
+    member do
+      post :follow
+    end
+  end
+	resources :podcasts, 	  		only: [:index, :show,   :new, :create, :destroy]
 	resources :sessions,   		    only: [:new, :create, :destroy]
   resources :relationships,       only: [:create, :destroy]
 	root to: 'static_pages#home'

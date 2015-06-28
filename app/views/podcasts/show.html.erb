@@ -1,0 +1,8 @@
+<% provide(:title, @podcast.name) %>
+<div class="row">
+  <%= @podcast.name %>
+  <br/>
+  <%= current_user.name %>
+  <%= button_to 'Follow Podcast', follow_podcast_path(@podcast.id), :method => :post %> 
+
+</div>
