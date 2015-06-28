@@ -9,6 +9,7 @@ class User < ActiveRecord::Base
                     uniqueness: { case_sensitive: false }
   has_secure_password
   validates :password, length: { minimum: 6 }
+
   has_many :relationships, foreign_key: "follower_id", dependent: :destroy
   has_many :active_relationships, class_name:  "Relationship",
                                 foreign_key: "follower_id",
@@ -24,7 +25,7 @@ class User < ActiveRecord::Base
                                  foreign_key: "followed_id",
                                  dependent:   :destroy
 
-
+  has_and_belongs_to_many :podcasts
 
 
 
