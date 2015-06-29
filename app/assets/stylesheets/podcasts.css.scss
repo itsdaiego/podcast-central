@@ -14,8 +14,10 @@ body{
         font-family: $main-font;
       }
       h2{
-        color: $main-color-link;
         font-size: 40px;
+        a{
+          color: $main-color-link;
+        }
       }
       p{
         font-family: $main-font;

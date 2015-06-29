@@ -9,6 +9,7 @@ Rails.application.routes.draw do
   resources :podcasts do
     member do
       post :follow
+      post :unfollow
     end
   end
 	resources :podcasts, 	  		only: [:index, :show,   :new, :create, :destroy]

@@ -1,5 +1,4 @@
 class PodcastsController < ApplicationController
-  before_action :signed_in_user
 
   def index
     @podcasts = Podcast.paginate(page: params[:page]).per_page(5)
@@ -19,7 +18,11 @@ class PodcastsController < ApplicationController
     current_user.podcasts << @podcast
     redirect_to @podcast
   end
-
+  def unfollow
+    @podcast = Podcast.find(params[:id])
+    current_user.podcasts.destroy(@podcast)
+    redirect_to @podcast
+  end
   private
   def podcast_params
     params.require(:podcast).permit(:name,:category,:description,:url, :image, :remote_image_url)
