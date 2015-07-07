@@ -3,21 +3,37 @@ aside.span4{
 		position: relative;
 		width: 100%;
 		height: 500px;
-		img{
-			border-radius:100px;
-			display:block;
-			margin: 20px auto 10px auto;
+		article{
+			img{
+				border-radius:100px;
+				display:block;
+				margin: 20px auto 10px auto;
+			}
+			p{
+				font-weight: 300;
+				text-align: center;
+				font-size: 25px;
+			}
+
+			@import "stats";
+
+			input[type="submit"]{
+				width: 230px !important;
+				margin-top: 20px;
+				border-radius: 100px;
+			}
 		}
-		p{
-			font-weight: 300;
-			text-align: center;
-			font-size: 25px;
-		}
-		@import "stats";
-		input[type="submit"]{
-			width: 230px !important;
-			margin-top: 20px;
-			border-radius: 100px;
+		article#podcasts{
+			.followed-podcasts{
+				text-align: center;
+				img{
+					width: 80px;
+					height: 80px;
+					display: inline-block;
+					margin: 0 10px;
+					border-radius: 100px;
+				}
+			}
 		}
 	}
 }

@@ -13,7 +13,11 @@
 			</article>
 			<article id="podcasts">
 				<p> Podcasts </p>
-				<%= @user.podcasts.count %>
+				<div class="followed-podcasts">
+					<% @user.podcasts.each do |p| %>
+						<%= image_tag(p.image) %>
+					<% end %>
+		  	</div>
 			</article>
 		</section>
 	</aside>
