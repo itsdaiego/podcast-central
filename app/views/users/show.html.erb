@@ -1,5 +1,5 @@
 <% provide(:title, @user.name) %>
-<div class="row">
+	<div class="row">
 	<aside class="span4">
 		<section>
 			<article id="user">
@@ -14,7 +14,12 @@
 			</article>
 			<article id="podcasts">
 				<p> Podcasts </p>
-				<%= @user.podcasts.count %>
+				<div class="followed-podcasts">
+					<% @user.podcasts.limit(3).each do |p| %>
+						<%= image_tag(p.image) %>
+					<% end %>
+					<%= link_to "view more", podcasts_user_path(@user), {:class=>"all-podcasts"}  %>
+				</div>
 			</article>
 		</section>
 	</aside>

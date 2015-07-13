@@ -49,7 +49,13 @@ class UsersController < ApplicationController
 		@users = @user.followers.paginate(page: params[:page])
 		render 'show_follow'
 	end
-	
+
+	def podcasts
+		@user = User.find(params[:id])
+		@title = @user.name
+		@podcasts = @user.podcasts.paginate(page: params[:page])
+	end
+
 	private
 	def user_params
 		params.require(:user).permit(:name,:email,:password,:password_confirmation)

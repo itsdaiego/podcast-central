@@ -6,6 +6,11 @@ Rails.application.routes.draw do
         get :following, :followers
     end
   end
+  resources :users do
+    member do
+        get :podcasts
+    end
+  end
   resources :podcasts do
     member do
       post :follow

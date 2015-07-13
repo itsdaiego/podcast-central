@@ -1,0 +1,8 @@
+<% provide(:title, @title) %>
+<section class="podcasts">
+<h1><%= @user.name + " is following: " %></h1>
+<ul class="podcasts">
+  <%= render @podcasts %>
+</ul>
+<%= will_paginate @podcasts, previous_label: ('PREVIOUS'), next_label: ('NEXT') %>
+</section>
