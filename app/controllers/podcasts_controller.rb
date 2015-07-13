@@ -5,7 +5,7 @@ class PodcastsController < ApplicationController
   end
   def new
     @podcast = new Podcast
-  end
+  end  
   def show
     @podcast = Podcast.find(params[:id])
   end
@@ -27,4 +27,4 @@ class PodcastsController < ApplicationController
   def podcast_params
     params.require(:podcast).permit(:name,:category,:description,:url, :image, :remote_image_url)
   end
-end
+ end
