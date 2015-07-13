@@ -2,26 +2,7 @@
 <% provide(:title, current_user.name) %>
 <div class="row">
 	<aside class="span4">
-		<section>
-			<article id="user">
-				<%= gravatar_pic current_user, size: 125 %>
-
-				<p><%= current_user.name %> </p>
-			</article>
-			<article id="follow">
-				<%= render 'shared/stats' %>
-			</article>
-			<article id="podcasts">
-				<p> Podcasts </p>
-				<div class="followed-podcasts">
-					<% @user.podcasts.limit(3).each do |p| %>
-						<%= image_tag(p.image) %>
-					<% end %>
-					<%= link_to "view more", podcasts_user_path(@user), {:class=>"all-podcasts"}  %>
-
-				</div>
-			</article>
-		</section>
+			<%= render 'shared/profile' %>
 	</aside>
 </div>
 <% else %>
