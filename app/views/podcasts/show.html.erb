@@ -1,14 +1,14 @@
 <% provide(:title, @podcast.name) %>
-<div class="row">
-  <%= @podcast.name %>
-  <% current_user.podcasts.each do |f| %>
-  <%= f.name %><br/>
-  <% end %>
-  <br/>
-  <%= current_user.name %>
-  <% if !current_user.podcasts.exists?(@podcast.id) %>
-    <%= button_to 'Follow Podcast', follow_podcast_path(@podcast.id), :method => :post %>
-  <% else %>
-    <%= button_to 'Unfollow Podcast', unfollow_podcast_path(@podcast.id), :method => :post %>
-  <% end %>
-</div>
+
+<section class="show-podcast"> 
+	<%= image_tag(@podcast.image) %>
+	<span><%= @podcast.name %></span>
+
+	<p> <%= @podcast.description %> </p>
+	<br/>
+	<% if !current_user.podcasts.exists?(@podcast.id) %>
+	<%= button_to 'Follow Podcast', follow_podcast_path(@podcast.id), class: "follow" %>
+	<% else %>
+	<%= button_to 'Unfollow Podcast', unfollow_podcast_path(@podcast.id), class: "follow" %>
+	<% end %>
+</section>

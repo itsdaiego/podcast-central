@@ -1,0 +1,22 @@
+section.show-podcast{
+	width: 100%;
+	height: 100%;
+	margin: 0 auto;
+	img{
+		width: 100%;
+		margin: 0 auto;
+	}
+	span{ 
+		color: $main-color-link;
+		font-size: 40px;
+		margin: 10px 0;
+	}
+	p{
+		color: $main-font-color;
+		font-size: 20px; 
+
+	}
+	input.follow[type="submit"]{
+		width: 100%; 
+	}
+}
