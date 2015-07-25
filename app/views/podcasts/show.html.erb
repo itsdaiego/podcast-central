@@ -7,7 +7,7 @@
 	<p> <%= @podcast.description %> </p>
 	<br/>
 	<% if !current_user.podcasts.exists?(@podcast.id) %>
-	<%= button_to 'Follow Podcast', follow_podcast_path(@podcast.id), class: "follow" %>
+	<%= button_to 'Follow Podcast', follow_podcast_path(@podcast.id), class: "follow_podcast_path" %>
 	<% else %>
 	<%= button_to 'Unfollow Podcast', unfollow_podcast_path(@podcast.id), class: "follow" %>
 	<% end %>
