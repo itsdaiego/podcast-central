@@ -12,7 +12,7 @@ gem 'bootstrap-will_paginate', '0.0.9'
 #gem "minitest", "~> 4.0"
 gem 'devise'
 gem 'activeadmin', github: 'activeadmin/activeadmin', branch: :master
-gem 'rmagick', '2.13.2', :git=>'http://github.com/rmagick/rmagick.git'
+gem 'rmagick', '2.15.3', :git=>'http://github.com/rmagick/rmagick.git'
 gem 'carrierwave'
 group :development, :test do
   #gem 'sqlite3', '1.3.8'
