@@ -2,7 +2,7 @@ aside.span4{
 	section{
 		position: relative;
 		width: 100%;
-		height: 500px;
+		height: auto;
 		article{
 			img{
 				border-radius:100px;
@@ -16,12 +16,6 @@ aside.span4{
 			}
 
 			@import "stats";
-
-			input[type="submit"]{
-				width: 230px !important;
-				margin-top: 20px;
-				border-radius: 100px;
-			}
 		}
 		article#podcasts{
 			.followed-podcasts{
@@ -40,5 +34,12 @@ aside.span4{
 				}
 			}
 		}
+	}
+	input[type="submit"]{
+		display: block;
+		width: 230px !important;
+		margin: 30px auto 0 auto;
+		border-radius: 100px;
+		text-align: center;
 	}
 }
