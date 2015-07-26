@@ -6,15 +6,17 @@
   <article id="follow">
     <%= render 'shared/stats' %>
   </article>
-  <article id="podcasts">
-    <p> Podcasts </p>
-    <div class="followed-podcasts">
-      <% @user.podcasts.limit(3).each do |p| %>
+  <% if(@user.podcasts.length > 0) %>
+    <article id="podcasts">
+      <p> Podcasts </p>
+      <div class="followed-podcasts">
+        <% @user.podcasts.limit(3).each do |p| %>
         <%= image_tag(p.image) %>
-      <% end %>
-      <% if(@user.podcasts.length > 0) %>
-      <%= link_to "view more", podcasts_user_path(@user), {class: "all-podcasts"}  %>
-      <% end %>
-    </div>
-  </article>
+        <% end %>
+        
+        <%= link_to "view more", podcasts_user_path(@user), {class: "all-podcasts"}  %>
+        
+      </div>
+    </article>
+  <% end %>
 </section>
