@@ -1,6 +1,7 @@
 module SessionsHelper
 
-  def sign_in(user)
+  #temp workaround: rename -> sign_in to sign_in_
+  def sign_in_(user)
     remember_token = User.new_remember_token
     cookies.permanent[:remember_token] = remember_token
     user.update_attribute(:remember_token, User.digest(remember_token))
