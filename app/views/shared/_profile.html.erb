@@ -1,7 +1,7 @@
 <section>
   <article id="user">
-    <%= gravatar_pic current_user, size: 125 %>
-    <p><%= current_user.name %> </p>
+    <%= gravatar_pic @user, size: 125 %>
+    <p><%= @user.name %> </p>
   </article>
   <article id="follow">
     <%= render 'shared/stats' %>
