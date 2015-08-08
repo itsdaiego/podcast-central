@@ -1,22 +1,26 @@
 <section>
   <article id="user">
-    <%= gravatar_pic @user, size: 125 %>
+    <% if(current_user.image.file.nil?)%>
+    <%= gravatar_pic current_user, size: 150 %>
+    <% else %>    
+    <%= image_tag(current_user.image) %>
+    <% end %>
     <p><%= @user.name %> </p>
   </article>
   <article id="follow">
     <%= render 'shared/stats' %>
   </article>
   <% if(@user.podcasts.length > 0) %>
-    <article id="podcasts">
-      <p> Podcasts </p>
-      <div class="followed-podcasts">
-        <% @user.podcasts.limit(3).each do |p| %>
-        <%= image_tag(p.image) %>
-        <% end %>
-        
-        <%= link_to "view more", podcasts_user_path(@user), {class: "all-podcasts"}  %>
-        
-      </div>
-    </article>
+  <article id="podcasts">
+    <p> Podcasts </p>
+    <div class="followed-podcasts">
+      <% @user.podcasts.limit(3).each do |p| %>
+      <%= image_tag(p.image) %>
+      <% end %>
+      
+      <%= link_to "view more", podcasts_user_path(@user), {class: "all-podcasts"}  %>
+      
+    </div>
+  </article>
   <% end %>
 </section>
