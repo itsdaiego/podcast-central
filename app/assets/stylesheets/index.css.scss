@@ -7,8 +7,9 @@ section.community, section.follow{
 		padding:0;
 		li{
 			img{
-				border-radius:100px;
+				border-radius:1000px;
 				margin-top:10px;
+				max-width: 100px;
 			}
 			a{
 				color: $main-font-color;

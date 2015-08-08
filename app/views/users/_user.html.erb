@@ -1,4 +1,8 @@
 <li>
-  <%= link_to (gravatar_pic user, size: 100), user %>
+  <% if(user.image.file.nil?)%>
+  	<%= link_to (gravatar_pic user, size: 100), user %>
+  <% else %>
+   	<%= image_tag(user.image) %>
+  <% end %>
   <%= link_to user.name, user %>
 </li>
