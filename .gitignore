@@ -17,3 +17,6 @@
 
 #Ignore sensitive data (secret_token)
 .secret
+
+#Ignore public folder
+/public/*
