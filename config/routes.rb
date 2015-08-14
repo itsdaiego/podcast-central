@@ -1,6 +1,13 @@
+require 'api_constraints'
+
 Rails.application.routes.draw do
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
+  namespace :api, defaults: {format: 'json'} do
+    scope module: :v1, constraints: ApiConstraints.new(version: 1, default: true) do
+      resources :users
+    end 
+  end
   resources :users do
     member do
         get :following, :followers
@@ -8,7 +15,7 @@ Rails.application.routes.draw do
   end
   resources :users do
     member do
-        get :podcasts
+         get :podcasts
     end
   end
   resources :podcasts do

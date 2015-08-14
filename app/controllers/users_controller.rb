@@ -1,4 +1,4 @@
-class UsersController < ApplicationController
+	class UsersController < ApplicationController
 	before_action :signed_in_user,
 	only: [:index, :edit, :update, :destroy, :following, :followers]
 
@@ -6,6 +6,11 @@ class UsersController < ApplicationController
 
 	def index
 		@users = User.paginate(page: params[:page]).per_page(5)
+
+		respond_to do |format|
+			format.html
+			format.json {render json: @users}
+		end
 	end
 	def new
 		@user = User.new
