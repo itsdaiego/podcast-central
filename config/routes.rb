@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
   namespace :api, defaults: {format: 'json'} do
-    scope module: :v1, constraints: ApiConstraints.new(version: 1, default: true) do
+    scope module: :v1 , parameter: {name: 'id' , value: 1},constraints: ApiConstraints.new(version: 1, default: true) do
       resources :users
     end 
   end
