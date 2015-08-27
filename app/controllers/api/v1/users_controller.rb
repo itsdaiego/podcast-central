@@ -11,6 +11,24 @@ module Api
 					respond_with "User not found"
 				end
 			end
+
+			def followers
+				begin
+					user = User.find(params[:id])
+					respond_with user.followers
+				rescue
+					respond_with "Something went wrong"
+				end
+			end
+
+			def following
+				begin
+					user = User.find(params[:id])
+					respond_with user.following
+				rescue
+					respond_with "Something went wrong"
+				end
+			end
 		end
 	end
 end 

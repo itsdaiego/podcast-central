@@ -14,6 +14,8 @@ gem 'devise'
 gem 'activeadmin', github: 'activeadmin/activeadmin', branch: :master
 gem 'rmagick', '2.15.3', :git=>'http://github.com/rmagick/rmagick.git'
 gem 'carrierwave'
+gem "friendly_id", "~> 5.0.1"
+
 group :development, :test do
   #gem 'sqlite3', '1.3.8'
   gem 'sqlite3'
