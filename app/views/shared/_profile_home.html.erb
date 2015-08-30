@@ -1,9 +1,9 @@
 <section>
   <article id="user">
-    <% if(current_user.image == nil)%>
+    <% if(current_user.image.file.nil?)%>
     <%= gravatar_pic current_user, size: 150 %>
     <% else %>    
-    <%= image_tag(current_user.image) %>
+    <%= image_tag(@podcasts_user_path.image) %>
     <% end %>
     <p><%= current_user.name %> </p>
   </article>
