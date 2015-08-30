@@ -3,7 +3,7 @@
     <% if(@user.image.file.nil?)%>
     <%= gravatar_pic @user, size: 150 %>
     <% else %>    
-    <%= image_tag(@podcasts_user_path.image) %>
+    <%= image_tag(@user.image) %>
     <% end %>
     <p><%= @user.name %> </p>
   </article>
