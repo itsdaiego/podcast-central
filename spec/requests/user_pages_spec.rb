@@ -28,7 +28,7 @@ describe "User pages" do
 
 		describe "invalid information" do
 			before { click_button "Save changes" }
-			it { should have_content('error') }
+			it { should have_content('error') } 
 		end
 
 		describe "valid information" do
@@ -52,7 +52,6 @@ describe "User pages" do
 			sign_in user
 			visit user_path(user)
 		end
-		it { should have_content("Podcasts") }
 		it { should have_content(user.name) }
 	end
 end
