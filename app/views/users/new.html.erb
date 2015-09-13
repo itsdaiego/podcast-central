@@ -20,6 +20,8 @@
 			"Password Confirmation *" %>
 			<%= f.password_field :password_confirmation, class: "form-control" %>
 
+			<%= f.file_field :image %>
+
 			<%= f.submit "SIGN UP", class: "btn btn-default" %>		
 			<% end %>
 		</div>

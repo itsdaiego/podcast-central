@@ -6,9 +6,9 @@ Rails.application.routes.draw do
   namespace :api, defaults: {format: 'json'} do
     scope module: :v1 , parameter: {name: 'id' , value: 1},constraints: ApiConstraints.new(version: 1, default: true) do
       resources :users do
-        get :following, :followers        
+        get :following, :followers
       end
-    end 
+    end
   end
   resources :users do
     member do

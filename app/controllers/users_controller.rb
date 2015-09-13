@@ -11,7 +11,9 @@ class UsersController < ApplicationController
 		@user = User.new
 	end
 	def create
+		extend UsersHelper
 		@user = User.new(user_params)
+		self.image_to_base64(@user)
 		if @user.save
 			sign_in_ @user
 			flash[:success] = "User Created!"
@@ -58,7 +60,7 @@ class UsersController < ApplicationController
 
 	private
 	def user_params
-		params.require(:user).permit(:name,:email,:password,:password_confirmation, :image)
+		params.require(:user).permit(:name,:email,:password,:password_confirmation, :image, :image64)
 	end
 	def correct_user
 		@user = User.find(params[:id])
