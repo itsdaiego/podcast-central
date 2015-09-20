@@ -9,7 +9,7 @@ module UsersHelper
   end
 
   def image_to_base64(user)
-    if(user.image64)
+    if(!user.image.blank?)
       user.image64 = Base64.encode64(user.image.read)
     end
   end
