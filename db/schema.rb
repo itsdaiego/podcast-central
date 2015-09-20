@@ -94,7 +94,7 @@ ActiveRecord::Schema.define(version: 20150913042043) do
     t.string   "remember_token"
     t.string   "image"
     t.string   "slug"
-    t.string   "image64"
+    t.text     "image64"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true
