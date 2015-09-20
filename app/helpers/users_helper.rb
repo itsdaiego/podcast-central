@@ -9,6 +9,8 @@ module UsersHelper
   end
 
   def image_to_base64(user)
-    user.image64 = Base64.encode64(user.image.read)
+    if(user.image64)
+      user.image64 = Base64.encode64(user.image.read)
+    end
   end
 end
