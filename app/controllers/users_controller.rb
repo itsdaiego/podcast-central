@@ -11,10 +11,8 @@ class UsersController < ApplicationController
 		@user = User.new
 	end
 	def create
-		#TODO: use user's helper properly
-		extend UsersHelper
 		@user = User.new(user_params)
-		self.image_to_base64(@user)
+		image_to_base64(@user)
 		if @user.save
 			sign_in_ @user
 			flash[:success] = "User Created!"
@@ -30,10 +28,8 @@ class UsersController < ApplicationController
 		@user = User.find(params[:id])
 	end
 	def update
-		#TODO: use user's helper properly
-		extend UsersHelper
 		@user = User.find(params[:id])
-		self.image_to_base64(@user)
+		image_to_base64(@user)
 		if @user.update_attributes(user_params)
 			flash[:success] = "Profile updated"
 			redirect_to @user
