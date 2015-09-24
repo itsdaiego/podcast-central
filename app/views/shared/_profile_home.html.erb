@@ -14,7 +14,7 @@
     <p> Podcasts </p>
     <div class="followed-podcasts">
       <% current_user.podcasts.limit(3).each do |p| %>
-      <%= image_tag(p.image) %>
+      <img src="data:image/jpeg;base64,<%= p.image64 %>" />
       <% end %>
       <%= link_to "view more", podcasts_user_path(current_user), {class: "all-podcasts"}  %>
 

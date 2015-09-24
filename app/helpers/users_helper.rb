@@ -7,10 +7,4 @@ module UsersHelper
     gravatar_url = "https://secure.gravatar.com/avatar/#{gravatar_id}?s=#{size}"
     image_tag(gravatar_url, alt: user.name, class: "gravatar")
   end
-
-  def image_to_base64(user)
-    if(!user.image.blank?)
-      user.image64 = Base64.encode64(user.image.read)
-    end
-  end
 end

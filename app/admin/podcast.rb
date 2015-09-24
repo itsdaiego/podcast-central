@@ -1,4 +1,8 @@
+include ApplicationHelper
 ActiveAdmin.register Podcast do
+  before_create do |podcast|
+    image_to_base64(podcast)
+  end
   permit_params :name, :category, :description, :url, :image, :remote_image_url
 
   index do

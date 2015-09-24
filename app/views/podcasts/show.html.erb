@@ -1,7 +1,7 @@
 <% provide(:title, @podcast.name) %>
 
-<section class="show-podcast"> 
-	<%= image_tag(@podcast.image) %>
+<section class="show-podcast">
+	<img src="data:image/jpeg;base64,<%= @podcast.image64 %>" />
 	<span><%= @podcast.name %></span>
 
 	<p> <%= @podcast.description %> </p>

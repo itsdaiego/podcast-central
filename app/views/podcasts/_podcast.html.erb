@@ -1,5 +1,5 @@
 <li>
-  <%= link_to (image_tag podcast.image_url(:large)),podcast %>
+  <img src="data:image/jpeg;base64,<%= podcast.image64 %>"/>
   <h2><%=  link_to podcast.name, podcast %></h2>
   <p><%=  podcast.description %></p>
   <p><%= link_to podcast.name + "'s website", "http://#{podcast.url}" %></p>
