@@ -2,7 +2,7 @@
   <% if(user.image.file.nil?)%>
   	<%= link_to (gravatar_pic user, size: 100), user %>
   <% else %>
-   	<%= image_tag(user.image) %>
+    <img src="data:image/jpeg;base64,<%= user.image64 %>" />
   <% end %>
   <%= link_to user.name, user %>
 </li>

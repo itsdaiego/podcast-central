@@ -2,8 +2,8 @@
   <article id="user">
     <% if(@user.image.file.nil?)%>
     <%= gravatar_pic @user, size: 150 %>
-    <% else %>    
-    <%= image_tag(@user.image) %>
+    <% else %>
+    <img src="data:image/jpeg;base64,<%= @user.image64 %>" />
     <% end %>
     <p><%= @user.name %> </p>
   </article>
@@ -15,11 +15,11 @@
     <p> Podcasts </p>
     <div class="followed-podcasts">
       <% @user.podcasts.limit(3).each do |p| %>
-      <%= image_tag(p.image) %>
+      <img src="data:image/jpeg;base64,<%= @user.image64 %>" />
       <% end %>
-      
+
       <%= link_to "view more", podcasts_user_path(@user), {class: "all-podcasts"}  %>
-      
+
     </div>
   </article>
   <% end %>

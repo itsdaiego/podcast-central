@@ -2,8 +2,8 @@
   <article id="user">
     <% if(current_user.image.file.nil?)%>
     <%= gravatar_pic current_user, size: 150 %>
-    <% else %>    
-    <%= image_tag(current_user.image) %>
+    <% else %>
+      <img src="data:image/jpeg;base64,<%= current_user.image64 %>" />
     <% end %>
     <p><%= current_user.name %> </p>
   </article>
