@@ -1,11 +1,12 @@
 class PodcastsController < ApplicationController
-
+  before_action :signed_in_user,
+  only: [:show]
   def index
     @podcasts = Podcast.paginate(page: params[:page]).per_page(5)
   end
   def new
     @podcast = new Podcast
-  end  
+  end
   def show
     @podcast = Podcast.find(params[:id])
   end
