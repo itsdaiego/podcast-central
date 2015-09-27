@@ -15,7 +15,7 @@
     <p> Podcasts </p>
     <div class="followed-podcasts">
       <% @user.podcasts.limit(3).each do |p| %>
-      <img src="data:image/jpeg;base64,<%= @user.image64 %>" />
+      <img src="data:image/jpeg;base64,<%= p.image64 %>" />
       <% end %>
 
       <%= link_to "view more", podcasts_user_path(@user), {class: "all-podcasts"}  %>
