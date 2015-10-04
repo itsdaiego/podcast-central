@@ -3,12 +3,13 @@
 <head>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title><%= full_title(yield(:title)) %></title>
-	<%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+	<%= favicon_link_tag  'favicon.ico'%>
+ 	<%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
 	<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
 	<%= csrf_meta_tags %>
 </head>
 <body>
-	<div id="wrapper"> 
+	<div id="wrapper">
 		<section id="header-section">
 			<%= render 'layouts/header' %>
 		</section>
@@ -22,7 +23,7 @@
 		<section id="footer-section">
 			<%= render 'layouts/footer' %>
 		</section>
-		
+
 	</div>
 </body>
 </html>
