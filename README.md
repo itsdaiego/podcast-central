@@ -1,6 +1,6 @@
 Podcast Central
 ============
-url: https://alpha-podcast-central.herokuapp.com
+url: https://alpha-podcast-central.herokuapp.com  
 A social network for meeting new people that love podcasts just like you do.
 
 Installation:
