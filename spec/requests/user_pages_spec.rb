@@ -13,7 +13,7 @@ describe "User pages" do
 			visit users_path
 		end
 		it{ should have_title(full_title('Community')) }
-		it{ should have_content('Members') }
+		it{ should have_content('Members') } 
 	end
 
 	describe "edit" do
@@ -28,7 +28,7 @@ describe "User pages" do
 
 		describe "invalid information" do
 			before { click_button "Save changes" }
-			it { should have_content('error') } 
+			it { should have_content('error') }
 		end
 
 		describe "valid information" do

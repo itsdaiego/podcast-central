@@ -1,9 +1,9 @@
 GIT
   remote: git://github.com/activeadmin/activeadmin.git
-  revision: 5a2b7b5bc683ae98a114958c3d1eb9c932234c56
+  revision: 06bf79c5821611bb3c80f58f7e54adc193ebfeb7
   branch: master
   specs:
-    activeadmin (1.0.0.pre1)
+    activeadmin (1.0.0.pre2)
       arbre (~> 1.0, >= 1.0.2)
       bourbon
       coffee-rails
@@ -11,7 +11,7 @@ GIT
       formtastic_i18n
       inherited_resources (~> 1.6)
       jquery-rails
-      jquery-ui-rails (~> 5.0)
+      jquery-ui-rails
       kaminari (~> 0.15)
       rails (>= 3.2, < 5.0)
       ransack (~> 1.3)
@@ -19,15 +19,9 @@ GIT
 
 GIT
   remote: git://github.com/bmabey/database_cleaner.git
-  revision: b8edac6bd04fb89a267201fa8d47066d511fd9de
+  revision: b87f00320f8aa0f7e499d183128f05ce29cedc33
   specs:
-    database_cleaner (1.4.1)
-
-GIT
-  remote: http://github.com/rmagick/rmagick.git
-  revision: 0f21fe608887567ae0bf0a20e3c92c7f5a07ae93
-  specs:
-    rmagick (2.15.3)
+    database_cleaner (1.5.1)
 
 GEM
   remote: https://rubygems.org/
@@ -59,7 +53,7 @@ GEM
     arbre (1.0.3)
       activesupport (>= 3.0.0)
     arel (4.0.2)
-    autoprefixer-rails (5.2.1.1)
+    autoprefixer-rails (6.0.3)
       execjs
       json
     bcrypt (3.1.10)
@@ -69,12 +63,11 @@ GEM
       sass (>= 3.3.0)
     bootstrap-will_paginate (0.0.9)
       will_paginate
-    bourbon (4.2.3)
+    bourbon (4.2.5)
       sass (~> 3.4)
-      thor
+      thor (~> 0.19)
     builder (3.1.4)
-    byebug (5.0.0)
-      columnize (= 0.9.0)
+    byebug (6.0.2)
     capybara (2.2.0)
       mime-types (>= 1.16)
       nokogiri (>= 1.3.3)
@@ -96,21 +89,20 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.9.1.1)
-    columnize (0.9.0)
-    cucumber (2.0.2)
+    cucumber (2.1.0)
       builder (>= 2.1.2)
-      cucumber-core (~> 1.2.0)
+      cucumber-core (~> 1.3.0)
       diff-lcs (>= 1.1.3)
-      gherkin (~> 2.12)
+      gherkin3 (~> 3.1.0)
       multi_json (>= 1.7.5, < 2.0)
       multi_test (>= 0.1.2)
-    cucumber-core (1.2.0)
-      gherkin (~> 2.12.0)
+    cucumber-core (1.3.0)
+      gherkin3 (~> 3.1.0)
     cucumber-rails (1.3.0)
       capybara (>= 1.1.2)
       cucumber (>= 1.1.8)
       nokogiri (>= 1.5.0)
-    devise (3.5.1)
+    devise (3.5.2)
       bcrypt (~> 3.0)
       orm_adapter (~> 0.1)
       railties (>= 3.2.6, < 5)
@@ -119,7 +111,7 @@ GEM
       warden (~> 1.2.3)
     diff-lcs (1.2.5)
     erubis (2.7.0)
-    execjs (2.5.2)
+    execjs (2.6.0)
     factory_girl (4.2.0)
       activesupport (>= 3.0.0)
     factory_girl_rails (4.2.0)
@@ -134,9 +126,8 @@ GEM
     formtastic_i18n (0.4.1)
     friendly_id (5.0.5)
       activerecord (>= 4.0.0)
-    gherkin (2.12.2)
-      multi_json (~> 1.3)
-    guard (2.12.9)
+    gherkin3 (3.1.2)
+    guard (2.13.0)
       formatador (>= 0.2.4)
       listen (>= 2.7, <= 4.0)
       lumberjack (~> 1.0)
@@ -146,7 +137,7 @@ GEM
       shellany (~> 0.0)
       thor (>= 0.18.1)
     guard-compat (1.2.1)
-    guard-rspec (4.6.3)
+    guard-rspec (4.6.4)
       guard (~> 2.1)
       guard-compat (~> 1.1)
       rspec (>= 2.99.0, < 4.0)
@@ -194,7 +185,7 @@ GEM
     nenv (0.2.0)
     nokogiri (1.6.6.2)
       mini_portile (~> 0.6.0)
-    notiffany (0.0.6)
+    notiffany (0.0.8)
       nenv (~> 0.1)
       shellany (~> 0.0)
     orm_adapter (0.5.0)
@@ -202,7 +193,7 @@ GEM
     polyamorous (1.2.0)
       activerecord (>= 3.0)
     polyglot (0.3.5)
-    pry (0.10.1)
+    pry (0.10.2)
       coderay (~> 1.1.0)
       method_source (~> 0.8.1)
       slop (~> 3.4)
@@ -221,26 +212,27 @@ GEM
       rails_serve_static_assets
       rails_stdout_logging
     rails_serve_static_assets (0.0.4)
-    rails_stdout_logging (0.0.3)
+    rails_stdout_logging (0.0.4)
     railties (4.0.8)
       actionpack (= 4.0.8)
       activesupport (= 4.0.8)
       rake (>= 0.8.7)
       thor (>= 0.18.1, < 2.0)
     rake (10.4.2)
-    ransack (1.6.6)
+    ransack (1.7.0)
       actionpack (>= 3.0)
       activerecord (>= 3.0)
       activesupport (>= 3.0)
       i18n
       polyamorous (~> 1.2)
-    rb-fsevent (0.9.5)
+    rb-fsevent (0.9.6)
     rb-inotify (0.9.5)
       ffi (>= 0.5.0)
     rdoc (3.12.2)
       json (~> 1.4)
     responders (1.1.2)
       railties (>= 3.2, < 4.2)
+    rmagick (2.15.4)
     rspec (3.3.0)
       rspec-core (~> 3.3.0)
       rspec-expectations (~> 3.3.0)
@@ -263,7 +255,7 @@ GEM
       rspec-support (~> 3.3.0)
     rspec-support (3.3.0)
     rubyzip (0.9.9)
-    sass (3.4.16)
+    sass (3.4.18)
     sass-rails (4.0.1)
       railties (>= 4.0.0, < 5.0)
       sass (>= 3.1.10)
@@ -300,7 +292,7 @@ GEM
       polyglot (>= 0.3.1)
     turbolinks (1.1.1)
       coffee-rails
-    tzinfo (0.3.44)
+    tzinfo (0.3.45)
     uglifier (2.1.1)
       execjs (>= 0.3.0)
       multi_json (~> 1.0, >= 1.0.2)
@@ -338,7 +330,7 @@ DEPENDENCIES
   pg (= 0.15.1)
   rails (= 4.0.8)
   rails_12factor (= 0.0.2)
-  rmagick (= 2.15.3)!
+  rmagick
   rspec-rails (~> 3.0)
   sass-rails (= 4.0.1)
   sdoc (= 0.3.20)

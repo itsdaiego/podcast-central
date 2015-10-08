@@ -12,7 +12,7 @@ gem 'bootstrap-will_paginate', '0.0.9'
 #gem "minitest", "~> 4.0"
 gem 'devise'
 gem 'activeadmin', github: 'activeadmin/activeadmin', branch: :master
-gem 'rmagick', '2.15.3', :git=>'http://github.com/rmagick/rmagick.git'
+gem 'rmagick'
 gem 'carrierwave'
 gem "friendly_id", "~> 5.0.1"
 gem 'byebug'
