@@ -15,8 +15,9 @@ gem 'activeadmin', github: 'activeadmin/activeadmin', branch: :master
 gem 'rmagick'
 gem 'carrierwave'
 gem "friendly_id", "~> 5.0.1"
-gem 'byebug'
+gem 'byebug' 
 group :development, :test do
+  gem 'shoulda-matchers', '~> 3.0'
   #gem 'sqlite3', '1.3.8'
   gem 'sqlite3'
   gem 'rspec-rails', '~> 3.0'
@@ -24,7 +25,6 @@ group :development, :test do
   gem 'guard-rspec'
   gem 'spork-rails', '4.0.0'
   gem 'guard-spork', '2.1.0'
-  gem 'childprocess', '0.3.6'
   end
 
 group :test do

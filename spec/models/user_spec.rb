@@ -51,4 +51,7 @@ describe User do
 		before { @user.save }
 		it(:remember_token) { should_not be_blank }
 	end
+	describe "must belong to many podcasts" do
+		it { should have_and_belong_to_many(:podcasts) }
+	end
 end

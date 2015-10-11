@@ -20,7 +20,7 @@ class PodcastsController < ApplicationController
     redirect_to @podcast
   end
   def unfollow
-    @podcast = Podcast.find(params[:id])
+    @podcast = Podcast.find(params[:id]) 
     current_user.podcasts.destroy(@podcast)
     redirect_to @podcast
   end
