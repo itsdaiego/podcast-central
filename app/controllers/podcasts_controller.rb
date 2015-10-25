@@ -6,7 +6,7 @@ class PodcastsController < ApplicationController
   end
   def new
     @podcast = new Podcast
-  end
+  end 
   def show
     @podcast = Podcast.find(params[:id])
   end
@@ -20,7 +20,7 @@ class PodcastsController < ApplicationController
     redirect_to @podcast
   end
   def unfollow
-    @podcast = Podcast.find(params[:id]) 
+    @podcast = Podcast.find(params[:id])
     current_user.podcasts.destroy(@podcast)
     redirect_to @podcast
   end
@@ -28,4 +28,4 @@ class PodcastsController < ApplicationController
   def podcast_params
     params.require(:podcast).permit(:name,:category,:description,:url, :image, :remote_image_url)
   end
- end
+end

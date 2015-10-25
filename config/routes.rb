@@ -7,7 +7,7 @@ Rails.application.routes.draw do
     scope module: :v1 , parameter: {name: 'id' , value: 1},constraints: ApiConstraints.new(version: 1, default: true) do
       resources :podcasts do
          get :show
-      end 
+      end
       resources :users do
         get :following, :followers
       end

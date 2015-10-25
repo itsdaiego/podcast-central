@@ -1,0 +1,14 @@
+@import 'variables';
+@media screen and (max-width: 600px){
+   section.community, section.follow{
+      ul{
+         li{
+            display: block;
+            width: auto;
+            a{
+               text-align: center;
+            }
+         }
+      }
+   }
+}

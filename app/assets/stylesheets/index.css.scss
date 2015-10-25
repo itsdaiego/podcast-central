@@ -1,20 +1,30 @@
 @import 'variables';
 section.community, section.follow{
+	//TODO improve this approach
+	width: 110%;
+	margin-left: -5%;
 	@import 'paginate';
-
+	h1, h3{
+		text-align: center;
+	}
 	ul{
 		list-style:none;
 		padding:0;
 		li{
+			display: inline-block;
+			width: 24%;
 			img{
-				border-radius:1000px;
-				margin-top:10px;
-				max-width: 100px;
+				border-radius: 1000px;
+			   margin: 10px auto 0 auto;
+			   max-width: 100px;
+			   display: block;
 			}
 			a{
 				color: $main-font-color;
+				font-family: $main-font;
 				font-size:15px;
-
+				display: block;
+				text-align: center;
 			}
 		}
 	}
