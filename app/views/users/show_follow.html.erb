@@ -1,14 +1,12 @@
 <% provide(:title, @title) %>
 <section class="follow">
   <div class="row">
-    <div class="col-md-8">
-      <h3><%= @title %></h3>
-      <% if @users.any? %>
-      <ul class="users follow">
-        <%= render @users %>
-      </ul>
-      <%= will_paginate %>
-      <% end %>
-    </div>
+   <h3><%= @title %></h3>
+   <% if @users.any? %>
+   <ul class="users follow">
+     <%= render @users %>
+   </ul>
+   <%= will_paginate %>
+   <% end %>
   </div>
 </section>
