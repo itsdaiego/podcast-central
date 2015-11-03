@@ -5,6 +5,14 @@ module Api
 
 			def index
 				begin
+					respond_with User.all
+				rescue
+					respond_with "User not found"
+				end
+			end
+
+			def show
+				begin
 					respond_with User.find(params[:id])
 				rescue
 					respond_with "User not found"

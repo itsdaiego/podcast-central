@@ -5,16 +5,15 @@ module Api
 
 			def index
 				begin
-					podcast = Podcast.all
-					respond_with podcast
+					respond_with Podcast.all
 				rescue
 					respond_with "A ninja captured my podcast list"
 				end
 			end
+
 			def show
 				begin
-					podcast = Podcast.find(params[:id])
-					respond_with podcast
+					respond_with Podcast.find(params[:id])
 				rescue
 					respond_with "A ninja captured this podcast"
 				end
