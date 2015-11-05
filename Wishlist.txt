@@ -1,0 +1,13 @@
+--- LIST OF NICE TO HAVE FEATURES ---
+
+-- Profile page should be improved (functionality  eg: The user shouldn't have to type his/her password everytime)
+
+-- User's page should be improved (layout)
+
+-- More information about each podcast (podcast details page)
+
+-- Build Forum (using discourse)
+
+-- Build a chat
+
+- Build a blog
