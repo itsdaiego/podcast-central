@@ -1,6 +1,6 @@
 --- LIST OF NICE TO HAVE FEATURES ---
 
--- Profile page should be improved (functionality  eg: The user shouldn't have to type his/her password everytime)
+-- Settings page should be improved (functionality  eg: The user shouldn't have to type his/her password everytime)
 
 -- User's page should be improved (layout)
 
@@ -8,6 +8,6 @@
 
 -- Build Forum (using discourse)
 
--- Build a chat
+-- Build a chat systme
 
 - Build a blog
