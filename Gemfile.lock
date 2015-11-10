@@ -17,12 +17,6 @@ GIT
       ransack (~> 1.3)
       sass-rails
 
-GIT
-  remote: git://github.com/bmabey/database_cleaner.git
-  revision: b87f00320f8aa0f7e499d183128f05ce29cedc33
-  specs:
-    database_cleaner (1.5.1)
-
 GEM
   remote: https://rubygems.org/
   specs:
@@ -68,12 +62,6 @@ GEM
       thor (~> 0.19)
     builder (3.1.4)
     byebug (6.0.2)
-    capybara (2.2.0)
-      mime-types (>= 1.16)
-      nokogiri (>= 1.3.3)
-      rack (>= 1.0.0)
-      rack-test (>= 0.5.4)
-      xpath (~> 2.0)
     carrierwave (0.10.0)
       activemodel (>= 3.2.0)
       activesupport (>= 3.2.0)
@@ -89,19 +77,6 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.9.1.1)
-    cucumber (2.1.0)
-      builder (>= 2.1.2)
-      cucumber-core (~> 1.3.0)
-      diff-lcs (>= 1.1.3)
-      gherkin3 (~> 3.1.0)
-      multi_json (>= 1.7.5, < 2.0)
-      multi_test (>= 0.1.2)
-    cucumber-core (1.3.0)
-      gherkin3 (~> 3.1.0)
-    cucumber-rails (1.3.0)
-      capybara (>= 1.1.2)
-      cucumber (>= 1.1.8)
-      nokogiri (>= 1.5.0)
     devise (3.5.2)
       bcrypt (~> 3.0)
       orm_adapter (~> 0.1)
@@ -117,8 +92,6 @@ GEM
     factory_girl_rails (4.2.0)
       factory_girl (~> 4.2.0)
       railties (>= 3.0.0)
-    faker (1.1.2)
-      i18n (~> 0.5)
     ffi (1.9.10)
     formatador (0.2.5)
     formtastic (3.1.3)
@@ -126,7 +99,6 @@ GEM
     formtastic_i18n (0.4.1)
     friendly_id (5.0.5)
       activerecord (>= 4.0.0)
-    gherkin3 (3.1.2)
     guard (2.13.0)
       formatador (>= 0.2.4)
       listen (>= 2.7, <= 4.0)
@@ -167,8 +139,6 @@ GEM
     kaminari (0.16.3)
       actionpack (>= 3.0.0)
       activesupport (>= 3.0.0)
-    libnotify (0.8.0)
-      ffi (>= 1.0.11)
     listen (3.0.3)
       rb-fsevent (>= 0.9.3)
       rb-inotify (>= 0.9)
@@ -178,13 +148,9 @@ GEM
       treetop (~> 1.4.8)
     method_source (0.8.2)
     mime-types (1.25.1)
-    mini_portile (0.6.2)
     minitest (4.7.5)
     multi_json (1.11.2)
-    multi_test (0.1.2)
     nenv (0.2.0)
-    nokogiri (1.6.6.2)
-      mini_portile (~> 0.6.0)
     notiffany (0.0.8)
       nenv (~> 0.1)
       shellany (~> 0.0)
@@ -228,8 +194,6 @@ GEM
     rb-fsevent (0.9.6)
     rb-inotify (0.9.5)
       ffi (>= 0.5.0)
-    rdoc (3.12.2)
-      json (~> 1.4)
     responders (1.1.2)
       railties (>= 3.2, < 4.2)
     rmagick (2.15.4)
@@ -254,20 +218,11 @@ GEM
       rspec-mocks (~> 3.3.0)
       rspec-support (~> 3.3.0)
     rspec-support (3.3.0)
-    rubyzip (0.9.9)
     sass (3.4.19)
     sass-rails (4.0.1)
       railties (>= 4.0.0, < 5.0)
       sass (>= 3.1.10)
       sprockets-rails (~> 2.0.0)
-    sdoc (0.3.20)
-      json (>= 1.1.3)
-      rdoc (~> 3.10)
-    selenium-webdriver (2.35.1)
-      childprocess (>= 0.2.5)
-      multi_json (~> 1.0)
-      rubyzip (< 1.0.0)
-      websocket (~> 1.0.4)
     shellany (0.0.1)
     shoulda-matchers (3.0.0)
       activesupport (>= 4.0.0)
@@ -300,10 +255,7 @@ GEM
       multi_json (~> 1.0, >= 1.0.2)
     warden (1.2.3)
       rack (>= 1.0)
-    websocket (1.0.7)
     will_paginate (3.0.4)
-    xpath (2.0.0)
-      nokogiri (~> 1.3)
 
 PLATFORMS
   ruby
@@ -314,28 +266,21 @@ DEPENDENCIES
   bootstrap-sass
   bootstrap-will_paginate (= 0.0.9)
   byebug
-  capybara (= 2.2.0)
   carrierwave
   coffee-rails (= 4.0.1)
-  cucumber-rails (= 1.3.0)
-  database_cleaner!
   devise
   factory_girl_rails (= 4.2.0)
-  faker (= 1.1.2)
   friendly_id (~> 5.0.1)
   guard-rspec
   guard-spork (= 2.1.0)
   jbuilder (= 1.0.2)
   jquery-rails (= 3.0.4)
-  libnotify (= 0.8.0)
   pg (= 0.15.1)
   rails (= 4.0.8)
   rails_12factor (= 0.0.2)
   rmagick
   rspec-rails (~> 3.0)
   sass-rails (= 4.0.1)
-  sdoc (= 0.3.20)
-  selenium-webdriver (= 2.35.1)
   shoulda-matchers (~> 3.0)
   spork-rails (= 4.0.0)
   sprockets (= 2.11.0)

@@ -18,30 +18,37 @@ header{
 				font-family: 'trackregular', 'Roboto', Arial;
 				margin-top: 14px;
 			}
-			a{					
+			a{
 				text-decoration:none;
 				color:#fccb05;
 			}
 		}
 		.menu-icon{
-	
+
 		}
 		.menu-right{
 			float:right;
 			padding: 0;
-			li{				
-			
+			img{
+				width: 40px;
+				border-radius: 100px;
+			}
+			b{
+				color: $main-color-link
+			}
+			li{
+
 				&:hover{
 					background-color: $main-color-link;
 
-					>a{
+					>a, b{
 						color: $main-color-theme;						}
 				}
 			}
 			>li{
 				padding:0 20px;
 			}
-			
+
 			ul.submenu{
 				padding:0;
 				margin-left: -20px;

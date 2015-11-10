@@ -5,22 +5,27 @@
 			<ul class="logo">
 				<li class="name">
 					<h1><a href="/">PODCAST CENTRAL</a></h1>
-				</li>					
-			</ul>			
-			<ul class="menu-right">					
-				<li><%= link_to "PODCASTS", podcasts_path %></li>
-				<li><%= link_to "COMMUNITY", users_path %></li>
-				<% if signed_in? %>
-				<li><a id="dropdown-menu"  href="#">ACCOUNT <b class="caret"> </b></a>
-					<ul class="submenu">
-						<li class="submenu"><%= link_to "PROFILE", current_user %>
-						</li>
-						<li class="submenu"><%= link_to "SETTINGS", edit_user_path(current_user) %></li>
-						<li class="submenu">
-							<%= link_to "SIGN OUT", signout_path, method: "delete" %>
-						</li>
-					</ul>
 				</li>
+			</ul>
+			<ul class="menu-right">
+				<li class="main-menu"><%= link_to "PODCASTS", podcasts_path %></li>
+				<li class="main-menu"><%= link_to "COMMUNITY", users_path %></li>
+				<li class="main-menu">
+				<% if signed_in? %>
+				 	<% if current_user.image.file.nil? %>
+						<a id="dropdown-menu"  href="#"><%= gravatar_pic current_user %> <b class="caret"> </b></a>
+					<% else %>
+						<a id="dropdown-menu"  href="#"><img src="data:image/jpeg;base64,<%= current_user.image64 %>" /> <b class="caret"> </b></a>
+					<% end %>
+						<ul class="submenu">
+							<li class="submenu"><%= link_to "PROFILE", current_user %>
+							</li>
+							<li class="submenu"><%= link_to "SETTINGS", edit_user_path(current_user) %></li>
+							<li class="submenu">
+								<%= link_to "SIGN OUT", signout_path, method: "delete" %>
+							</li>
+						</ul>
+					</li>
 				<% else %>
 				<li><%= link_to "SIGN IN", signin_path %></li>
 				<% end %>
