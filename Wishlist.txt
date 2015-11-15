@@ -8,6 +8,6 @@
 
 -- Build Forum (using discourse)
 
--- Build a chat systme
+-- Build a chat system
 
 - Build a blog
