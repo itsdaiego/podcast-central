@@ -8,7 +8,7 @@ class User < ActiveRecord::Base
   validates :email, presence: true, format: { with: VALID_EMAIL_REGEX },
                     uniqueness: { case_sensitive: false }
   has_secure_password
-  validates :password, length: { minimum: 6 }
+  validates :password, length: { minimum: 6 }, presence: true, confirmation: true, on: :create
 
   has_many :relationships, foreign_key: "follower_id", dependent: :destroy
   has_many :active_relationships, class_name:  "Relationship",

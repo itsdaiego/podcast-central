@@ -29,8 +29,9 @@ class UsersController < ApplicationController
 	end
 	def update
 		@user = User.find(params[:id])
-		image_to_base64(@user)
-		if @user.update_attributes(user_params)
+    image_to_base64(@user)
+    #TODO: Should persist new images
+    if @user.update({name: params[:user][:name], email: params[:user][:email]})
 			flash[:success] = "Profile updated"
 			redirect_to @user
 		else

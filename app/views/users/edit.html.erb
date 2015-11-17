@@ -11,16 +11,16 @@
 			<%= f.text_field :name, class: "form-control" %>
 
 			<%= f.label :email,"Email " %>
-			<%= f.text_field :email, class: "form-control" %>
+      <%= f.text_field :email, class: "form-control" %>
 
-			<%= f.label :password,"Password " %>
-			<%= f.password_field :password, class: "form-control" %>
-
-			<%= f.label :password_confirmation,
-			"Password Confirmation " %>
-			<%= f.password_field :password_confirmation, class: "form-control" %>
-
+		  <% if current_user.image.file.nil? %>
+        <%= gravatar_pic current_user %>
+      <% else %>         
+        <img src="data:image/jpeg;base64,<%= current_user.image64 %>" />
+      <% end %>
+      
 			<%= f.file_field :image %>
+
 			<%= f.submit "Save changes", class: "btn btn-default" %>		
 			<% end %>
 		</div>
