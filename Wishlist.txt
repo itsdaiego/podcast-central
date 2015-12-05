@@ -11,3 +11,5 @@
 -- Build a chat system
 
 - Build a blog
+
+- Add password verification (strong/weak)
