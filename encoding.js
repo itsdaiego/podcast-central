@@ -1,0 +1,1 @@
+itís wróng
