@@ -4,7 +4,7 @@ ruby '2.3.1'
 
 gem 'rails', '4.0.8'
 gem 'bootstrap-sass'
-gem 'sprockets-rails', :require => 'sprockets/railtie'
+gem 'sprockets-rails', '2.2' ,:require => 'sprockets/railtie'
 gem 'bcrypt-ruby', '3.1.2'
 gem 'will_paginate', '3.0.4'
 gem 'bootstrap-will_paginate', '0.0.9'
