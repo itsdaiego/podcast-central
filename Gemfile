@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 ruby '2.3.1'
 #ruby-gemset=railstutorial_rails_4_0
 
-gem 'rails', '4.0.8'
+gem 'rails', '4.2'
 gem 'bootstrap-sass'
 gem 'sprockets-rails', '2.2' ,:require => 'sprockets/railtie'
 gem 'bcrypt-ruby', '3.1.2'
@@ -21,6 +21,7 @@ group :development, :test do
   gem 'rspec-rails', '~> 3.0'
   # The following optional lines are part of the advanced setup.
   gem 'guard-rspec'
+  gem 'rspec-mocks'
   gem 'spork-rails', '4.0.0'
   gem 'guard-spork', '2.1.0'
   gem 'capybara'
@@ -30,7 +31,7 @@ group :test do
   gem 'factory_girl_rails', '4.2.0'
 end
 
-gem 'sass-rails', '4.0.1'
+gem 'sass-rails'
 gem 'uglifier', '2.1.1'
 gem 'coffee-rails', '4.0.1'
 gem 'jquery-rails', '3.0.4'
